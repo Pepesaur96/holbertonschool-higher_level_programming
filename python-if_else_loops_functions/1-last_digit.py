@@ -5,7 +5,8 @@ last_digit = abs(number) % 10
 is_negative = number < 0
 
 if is_negative:
-    print(f"Last digit of {number} is -{last_digit} ", end="")
+    print(
+        f"Last digit of {number} is -{last_digit} and is less than 6 and not 0", end="")
 else:
     print(f"Last digit of {number} is {last_digit} ", end="")
 
