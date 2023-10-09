@@ -6,5 +6,8 @@
 
 
 class Square:
+    """This class defines a square"""
+
     def __init__(self, size):
+        """This method is the constructor and it takes in an argument called size"""
         self.__size = size
