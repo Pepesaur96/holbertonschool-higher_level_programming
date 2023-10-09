@@ -9,5 +9,7 @@ class Square:
     """This class defines a square"""
 
     def __init__(self, size):
-        """This method is the constructor and it takes in an argument called size"""
+        """Initializes an instance of the Square class
+        Args:
+            size (int): The size of the square"""
         self.__size = size
