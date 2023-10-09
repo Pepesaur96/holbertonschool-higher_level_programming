@@ -17,7 +17,8 @@ class Square:
         __size (int): The size of the square."""
 
     def __init__(self, size=0):
-        """Initializes a new instance of the Square class with an optional size.
+        """Initializes a new instance of the Square class with an
+        optional size.
         Args:
             size (int, optional): The size of the square. Defaults to 0.
         Raises:
