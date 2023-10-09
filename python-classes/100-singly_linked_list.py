@@ -78,13 +78,13 @@ class SinglyLinkedList:
 
         new_node = Node(value)
 
-        if self.head is None or self.head.data >= value:
+        if self.head is None or self.head.data > value:
             new_node.next_node = self.head
             self.head = new_node
         else:
             current = self.head
             while current.next_node is not None:
-                if current.next_node.data >= value:
+                if current.next_node.data < value:
                     break
                 current = current.next_node
             new_node.next_node = current.next_node
