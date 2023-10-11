@@ -77,10 +77,10 @@ class Rectangle:
         """Returns a string representation of the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        rect_str = "\n".join(["#" * self.__width] * self.__height)
+        rect_str = "\n".join(["#" * self.__width] * (self.__height))
         return rect_str
 
     def __repr__(self):
-        """Returns a string representation of the rectangle that can be used
-        to recreate the object."""
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        """Returns a string representation of the memory
+        address of the object."""
+        return f"<3-rectangle.{self.__class__.__name__} object at {id(self)}>"
