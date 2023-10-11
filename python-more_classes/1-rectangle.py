@@ -6,9 +6,7 @@ Module that defines a rectangle by width and height
 
 class Rectangle:
     """Defines class rectangle with private attributes width and height
-    Args:
-        width (int): width of rectangle
-        height (int): height of rectangle
+
     Methods:
         __init__(self, width, height)
         width(self)
@@ -17,9 +15,12 @@ class Rectangle:
         height(self, value)"""
 
     def __init__(self, width, height):
-        """Initializes rectangle"""
-        self.__width = width
-        self.__height = height
+        """Initializes rectangle
+        Args:
+            width (int): width of rectangle
+            height (int): height of rectangle"""
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
