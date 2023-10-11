@@ -4,7 +4,6 @@
 
 class Rectangle:
     """Defines class rectangle with private attributes width and height.
-
     Methods:
         __init__(self, width, height)
         width(self)
@@ -12,7 +11,9 @@ class Rectangle:
         height(self)
         height(self, value)
         area(self)
-        perimeter(self)"""
+        perimeter(self)
+        print(self)
+        str(self)"""
 
     def __init__(self, width=0, height=0):
         """Initializes rectangle.
@@ -71,3 +72,18 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * self.__width + 2 * self.__height
+
+    def print(self):
+        """Print the rectangle using the '#' character to stdout."""
+        if self.__width == 0 or self.__height == 0:
+            print()
+        else:
+            for _ in range(self.__height):
+                print("#" * self.__width)
+
+    def str(self):
+        """Returns a string representation of the rectangle."""
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        else:
+            return "\n".join(["#" * self.__width] * self.__height)
