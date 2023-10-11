@@ -12,8 +12,8 @@ class Rectangle:
         height(self, value)
         area(self)
         perimeter(self)
-        print(self)
-        str(self)"""
+        __str__(self)
+        __repr__(self)"""
 
     def __init__(self, width=0, height=0):
         """Initializes rectangle.
@@ -73,17 +73,14 @@ class Rectangle:
             return 0
         return 2 * self.__width + 2 * self.__height
 
-    def print(self):
-        """Print the rectangle using the '#' character to stdout."""
-        if self.__width == 0 or self.__height == 0:
-            print()
-        else:
-            for _ in range(self.__height):
-                print("#" * self.__width)
-
-    def str(self):
+    def __str__(self):
         """Returns a string representation of the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ""
         else:
             return "\n".join(["#" * self.__width] * self.__height)
+
+    def __repr__(self):
+        """Returns a string representation of the rectangle that can be used
+        to recreate the object."""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
