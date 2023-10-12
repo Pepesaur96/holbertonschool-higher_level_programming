@@ -36,7 +36,7 @@ class Node:
             value: The new data value to set (must be an integer).
         Raises:
             TypeError: If value is not an integer."""
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("data must be an integer")
         self.__data = value
 
@@ -55,8 +55,8 @@ class Node:
             None).
         Raises:
             TypeError: If value is not a Node object or None."""
-        if value is not None and not isinstance(value, Node):
-            raise TypeError("next_node must be a Node object or None")
+        if type(value) is not Node and value is not None:
+            raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
 
@@ -64,7 +64,20 @@ class SinglyLinkedList:
     def __init__(self):
         """Initializes a new instance of the SinglyLinkedList class with
         an empty list."""
-        self.head = None
+        self.__head = None
+
+    def __str__(self):
+        """Returns a string representation of the entire singly linked list.
+        Returns:
+            str: The string representation of the list."""
+        string = ""
+        tmp = self.__head
+        while tmp is not None:
+            string += str(tmp.data)
+            tmp = tmp.next_node
+            if tmp is not None:
+                string += "\n"
+        return string
 
     def sorted_insert(self, value):
         """Inserts a new Node into the correct sorted position in the list
@@ -73,30 +86,19 @@ class SinglyLinkedList:
             value: The value to insert into the list (must be an integer).
         Raises:
             TypeError: If value is not an integer."""
-        if not isinstance(value, int):
-            raise TypeError("Value must be an integer")
+        new = Node(value)
+        if self.__head is None:
+            self.__head = new
+            return
 
-        new_node = Node(value)
+        tmp = self.__head
+        if new.data < tmp.data:
+            new.next_node = self.__head
+            self.__head = new
+            return
 
-        if self.head is None or self.head.data > value:
-            new_node.next_node = self.head
-            self.head = new_node
-        else:
-            current = self.head
-            while current.next_node is not None:
-                if current.next_node.data > value:
-                    break
-                current = current.next_node
-            new_node.next_node = current.next_node
-            current.next_node = new_node
-
-    def __str__(self):
-        """Returns a string representation of the entire singly linked list.
-        Returns:
-            str: The string representation of the list."""
-        result = ""
-        current = self.head
-        while current is not None:
-            result += str(current.data) + "\n"
-            current = current.next_node
-        return result.strip()
+        while (tmp.next_node is not None) and (new.data > tmp.next_node.data):
+            tmp = tmp.next_node
+        new.next_node = tmp.next_node
+        tmp.next_node = new
+        return
