@@ -1,8 +1,14 @@
 #!/usr/bin/python3
+"""
+LockedClass - prevents the user from dynamically creating new instance
+attributes, except if the new instance attribute is called first_name
+"""
+
+
 class LockedClass:
-    def __setattr__(self, name, value):
-        if name == "first name":
-            self.__dict__[name] = value
-        else:
-            raise AttributeError("'LockedClass' object has no attribute '{}'"
-                                 .format(name))
+    """
+    __slots__ - is used to explicitly declare data members and
+    deny the user to create any other attribute other than the ones
+    specified
+    """
+    __slots__ = "first_name"
