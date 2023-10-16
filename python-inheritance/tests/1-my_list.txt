@@ -70,3 +70,5 @@ Test type, isinstance, issubclass:
 
      >>> 'print_sorted' in dir(MyList)
      True
+
+FAIL CASES:
