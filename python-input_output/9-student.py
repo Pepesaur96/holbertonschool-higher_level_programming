@@ -2,7 +2,7 @@
 """Contains Student class"""
 
 
-class Student:
+class Student():
     """Student class
     methods:
         to_json: returns dictionary representation of a Student instance
