@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """
-Module 9-add_item
-
 Contains function that adds and saves to Python obj to JSON file; loads objects
 """
 
