@@ -20,7 +20,7 @@ class Student():
             age (int): Student's age.
         """
         self.first_name = first_name
-        self.Last_name = last_name
+        self.last_name = last_name
         self.age = age
 
     def to_json(self):
