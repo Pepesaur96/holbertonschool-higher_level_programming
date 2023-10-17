@@ -24,8 +24,8 @@ class Student():
         if attrs is None:
             return self.__dict__
         else:
-            dict = {}
+            dic = {}
             for att in attrs:
                 if att in self.__dict__.keys():
-                    dict[att] = self.__dict__[att]
-            return dict
+                    dic[att] = self.__dict__[att]
+            return dic
