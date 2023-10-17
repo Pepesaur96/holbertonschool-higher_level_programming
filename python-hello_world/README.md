@@ -32,7 +32,7 @@ Example:
 
 **How to use strings:**
 
-    Strings are sequences of characters and are defined using either single (' '), double (" "), or triple (''' or """) quotes. You can perform various operations on strings, such as concatenation, slicing, and more.
+Strings are sequences of characters and are defined using either single (' '), double (" "), or triple (''' or """) quotes. You can perform various operations on strings, such as concatenation, slicing, and more.
 
 Example:
 
@@ -50,13 +50,13 @@ Example:
     length = len(text)
     print("Length:", length)
 
-What are indexing and slicing in Python:
+**What are indexing and slicing in Python:**
 
-    In Python, you can access individual characters in a string using indexing. The first character has an index of 0, the second has an index of 1, and so on. You can also use negative indexing to access characters from the end of the string, where -1 represents the last character.
+In Python, you can access individual characters in a string using indexing. The first character has an index of 0, the second has an index of 1, and so on. You can also use negative indexing to access characters from the end of the string, where -1 represents the last character.
 
-    Slicing is a way to extract a portion of a string by specifying a range of indices. The syntax for slicing is string[start:end], where start is the index of the first character you want to include, and end is the index of the first character you want to exclude.
+Slicing is a way to extract a portion of a string by specifying a range of indices. The syntax for slicing is string[start:end], where start is the index of the first character you want to include, and end is the index of the first character you want to exclude.
 
-    Example:
+Example:
 
     text = "Python is awesome"
 
@@ -67,20 +67,21 @@ What are indexing and slicing in Python:
     # Slicing
     substring = text[7:9]  # 'is'
 
-What is the official Python coding style and how to check your code with pycodestyle:
+**What is the official Python coding style and how to check your code with pycodestyle:**
 
-    PEP 8 is the official style guide for writing Python code. It covers various aspects of code formatting, naming conventions, and more. To follow PEP 8, you can use tools like pycodestyle (formerly known as pep8) to check your code for compliance.
+PEP 8 is the official style guide for writing Python code. It covers various aspects of code formatting, naming conventions, and more. To follow PEP 8, you can use tools like pycodestyle (formerly known as pep8) to check your code for compliance.
 
-Here's how to check your code with pycodestyle:
+**Here's how to check your code with pycodestyle:**
 
-    Install pycodestyle (if not already installed):
+1- Install pycodestyle (if not already installed):
 
     pip install pycodestyle
-    Run pycodestyle on your Python script or file:
+
+2- Run pycodestyle on your Python script or file:
 
     pycodestyle your_script.py
 
-    It will analyze your code and provide feedback on any PEP 8 violations. You can then make the necessary adjustments to ensure your code complies with the Python coding style.
+It will analyze your code and provide feedback on any PEP 8 violations. You can then make the necessary adjustments to ensure your code complies with the Python coding style.
 
 Example of using pycodestyle:
 
