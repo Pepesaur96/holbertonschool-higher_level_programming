@@ -1,12 +1,12 @@
 GENERAL TOPICS:
 How to use the Python interpreter:
 
-    1- Open a terminal or command prompt on your computer.
-    2- Type "python" or "python3" (depending on your system) and press Enter to start the Python interpreter. You should see a prompt (">>>") indicating that you're in the Python interactive mode.
-    3- You can now enter Python code line by line and see the results immediately.
-    4- To exit the Python interpreter enter the command "exit()" or press Ctrl+D.
+1- Open a terminal or command prompt on your computer.
+2- Type "python" or "python3" (depending on your system) and press Enter to start the Python interpreter. You should see a prompt (">>>") indicating that you're in the Python interactive mode.
+3- You can now enter Python code line by line and see the results immediately.
+4- To exit the Python interpreter enter the command "exit()" or press Ctrl+D.
 
-    Example:
+Example:
 
     > > > print("Hello, Python!")
     > > > Hello, Python!
@@ -14,9 +14,9 @@ How to use the Python interpreter:
     > > > 5
     > > > exit() # To exit the Python interpreter
 
-How to print text and variables using print:
+**How to print text and variables using print:**
 
-    You can use the print() function to display text and the values of variables. You can pass multiple arguments to print() by separating them with commas.
+You can use the print() function to display text and the values of variables. You can pass multiple arguments to print() by separating them with commas.
 
     Example:
 
