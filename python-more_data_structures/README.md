@@ -1,6 +1,7 @@
 GENERAL TOPICS:
 
-##Why Python programming is awesome
+## Why Python programming is awesome
+
 What are sets and how to use them
 What are the most common methods of set and how to use them
 When to use sets versus lists
