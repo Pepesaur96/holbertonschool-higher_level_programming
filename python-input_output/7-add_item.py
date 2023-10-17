@@ -8,9 +8,9 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
 
-try:
-    existing_content = load_from_json_file(filename)
-except FileNotFoundError:
+if FileNotFoundError:
     existing_content = []
+else:
+    existing_content = load_from_json_file(filename)
 
 save_to_json_file(existing_content + argv[1:], filename)
