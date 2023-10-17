@@ -1,9 +1,13 @@
 GENERAL TOPICS:
-How to use the Python interpreter:
+
+**How to use the Python interpreter:**
 
 1- Open a terminal or command prompt on your computer.
+
 2- Type "python" or "python3" (depending on your system) and press Enter to start the Python interpreter. You should see a prompt (">>>") indicating that you're in the Python interactive mode.
+
 3- You can now enter Python code line by line and see the results immediately.
+
 4- To exit the Python interpreter enter the command "exit()" or press Ctrl+D.
 
 Example:
@@ -18,7 +22,7 @@ Example:
 
 You can use the print() function to display text and the values of variables. You can pass multiple arguments to print() by separating them with commas.
 
-    Example:
+Example:
 
     name = "Alice"
     age = 30
@@ -26,11 +30,11 @@ You can use the print() function to display text and the values of variables. Yo
     print("Hello, " + name)
     print("Age:", age)
 
-How to use strings:
+**How to use strings:**
 
     Strings are sequences of characters and are defined using either single (' '), double (" "), or triple (''' or """) quotes. You can perform various operations on strings, such as concatenation, slicing, and more.
 
-    Example:
+Example:
 
     text = "Hello, World!"
 
