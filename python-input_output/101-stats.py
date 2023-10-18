@@ -17,40 +17,33 @@ format: <status code (in ascending order)>: <number>
 
 import sys
 
-# Initialize variables to store metrics
-total_file_size = 0
-status_code_counts = {}
 
-try:
-    line_count = 0
-    for line in sys.stdin:
-        line_count += 1
-        elements = line.split()
-        if len(elements) < 9:
-            continue
+def print_size_and_codes(size, stat_codes):
+    print("File size: {:d}".format(size))
+    for k, v in sorted(stat_codes.items()):
+        if v:
+            print("{:s}: {:d}".format(k, v))
 
-        status_code = elements[-2]
-        file_size = elements[-1]
 
-        # Update total file size
-        total_file_size += int(file_size)
+def parse_stdin_and_compute():
+    size = 0
+    lines = 0
+    stat_codes = {"200": 0, "301": 0, "400": 0, "401": 0,
+                  "403": 0, "404": 0, "405": 0, "500": 0}
+    try:
+        for line in sys.stdin:
+            fields = list(map(str, line.strip().split(" ")))
+            size += int(fields[-1])
+            if fields[-2] in stat_codes:
+                stat_codes[fields[-2]] += 1
+            lines += 1
+            if lines % 10 == 0:
+                print_size_and_codes(size, stat_codes)
+    except KeyboardInterrupt:
+        print_size_and_codes(size, stat_codes)
+        raise
 
-        # Update status code counts
-        if status_code in status_code_counts:
-            status_code_counts[status_code] += 1
-        else:
-            status_code_counts[status_code] = 1
+    print_size_and_codes(size, stat_codes)
 
-        # Print statistics every 10 lines
-        if line_count % 10 == 0:
-            print("File size: {}".format(total_file_size))
-            for code in sorted(status_code_counts.keys()):
-                print("{}: {}".format(code, status_code_counts[code]))
 
-except KeyboardInterrupt:
-    pass
-
-# Print the final statistics
-print("File size: {}".format(total_file_size))
-for code in sorted(status_code_counts.keys()):
-    print("{}: {}".format(code, status_code_counts[code]))
+parse_stdin_and_compute()
