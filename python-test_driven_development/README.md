@@ -5,23 +5,31 @@ GENERAL TOPICS:
 Python programming is considered awesome for several reasons, including:
 
 1- Readability: Python's simple and clean syntax makes it easy to read and understand code.
+
 2- Versatility: Python is a versatile language used for web development, data analysis, artificial intelligence, scientific computing, and more.
+
 3- Large Standard Library: Python comes with a vast standard library that includes modules for various tasks, reducing the need for writing code from scratch.
+
 4- Open Source and Community: Python is open source, and it has a large and active community that contributes to its development and provides support through documentation, forums, and libraries.
+
 5- Cross-Platform Compatibility: Python code can run on multiple platforms with minimal modifications, enhancing its portability.
 
 ## What’s an interactive test
 
-- An interactive test typically refers to a test or script that allows users to interact with it, providing input and receiving output in a real-time or interactive manner. This can be useful for testing and demonstrating how code works.
+An interactive test typically refers to a test or script that allows users to interact with it, providing input and receiving output in a real-time or interactive manner. This can be useful for testing and demonstrating how code works.
 
 ## Why tests are important
 
 Tests are essential for several reasons:
 
 1- Quality Assurance: Tests help ensure that a program or application functions correctly and meets the specified requirements.
+
 2- Regression Testing: Tests prevent the introduction of new bugs when making changes to existing code.
+
 3- Documentation: Test cases and unit tests can serve as documentation for how a program is expected to behave.
+
 4- Continuous Integration: Tests are crucial in continuous integration pipelines to automate testing and identify issues early in development.
+
 5- Debugging: Tests help narrow down the source of issues, making debugging more efficient.
 
 ## How to write Docstrings to create tests
@@ -83,11 +91,17 @@ To create tests in Python, you can use testing frameworks like unittest, pytest,
 Edge cases are input values or situations that are at the boundaries of the expected behavior of your code. To find edge cases, consider the following strategies:
 
 1- Boundary values: Test with values at the lower and upper limits, e.g., zero, negative numbers, large numbers, empty lists, or strings.
+
 2- Extreme values: Check extreme values that might lead to unexpected behavior, like very large or very small numbers.
+
 3- Empty data: Test with empty data structures, like empty lists, sets, or dictionaries.
+
 4- Null values: Test with None or null values, if applicable.
+
 5- Corner cases: Consider scenarios that combine multiple edge cases, which might result in unusual behavior.
+
 5- Input constraints: Review input constraints or requirements to identify scenarios that need special attention.
+
 6- Unexpected data: Think about data that may not be typical but is still within the domain of your code's functionality.
 
 By testing these edge cases, you can uncover potential issues and ensure that your code behaves correctly in various scenarios, improving its robustness and reliability.
