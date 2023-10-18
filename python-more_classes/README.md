@@ -21,7 +21,7 @@ A class is a blueprint or template for creating objects. It defines the structur
 - An object is an instance of a class.
 - An instance is a specific realization or occurrence of an object based on a class.
 
-# What is the difference between a class and an object or instance
+## What is the difference between a class and an object or instance
 
 A class is a blueprint or template, while an object/instance is a concrete realization of that blueprint.
 
