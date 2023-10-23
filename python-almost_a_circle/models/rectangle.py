@@ -15,10 +15,12 @@ class Rectangle(Base):
         id (int): id of rectangle
     Methods:
         __init__(self, width, height, x=0, y=0, id=None)
-        width(self)
-        width(self, value)
-        height(self)
-        height(self, value)
+        width(self)             width(self, value)
+        height(self)            height(self, value)
+        x(self)                 x(self, value)
+        y(self)                 y(self, value)
+        area(self)
+        display(self)
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -102,3 +104,9 @@ class Rectangle(Base):
         for i in range(self.__height):
             print(" " * self.__x, end="")
             print("#" * self.__width)
+
+    def __str__(self):
+        """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+        return "[{:s}] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
+            self.__class__.__name__, self.id, self.__x, self.__y,
+            self.__width, self.__height)
