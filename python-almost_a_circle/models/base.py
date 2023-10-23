@@ -18,6 +18,7 @@ class Base:
         save_to_file(cls, list_objs)
         from_json_string(json_string)
         create(cls, **dictionary)
+        load_from_file(cls)
     """
     __nb_objects = 0
 
@@ -72,7 +73,7 @@ class Base:
         """ load_from_file method """
         filename = cls.__name__ + ".json"
         try:
-            with open(filename, "r") as f:
+            with open(filename, 'r', newline='') as f:
                 objs = cls.from_json_string(f.read())
             for obj in enumerate(objs):
                 objs[obj] = cls.create(**objs[obj])
