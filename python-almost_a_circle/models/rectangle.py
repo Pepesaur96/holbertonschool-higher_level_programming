@@ -21,6 +21,8 @@ class Rectangle(Base):
         y(self)                 y(self, value)
         area(self)
         display(self)
+        __str__(self)
+        update(self, *args, **kwargs)
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -110,3 +112,13 @@ class Rectangle(Base):
         return "[{:s}] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
             self.__class__.__name__, self.id, self.__x, self.__y,
             self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """Update method"""
+        if args:
+            attrs = ["id", "width", "height", "x", "y"]
+            for i in range(len(args)):
+                setattr(self, attrs[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
