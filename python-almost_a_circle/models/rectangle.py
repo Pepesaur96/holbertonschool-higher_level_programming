@@ -23,6 +23,7 @@ class Rectangle(Base):
         display(self)
         __str__(self)
         update(self, *args, **kwargs)
+        to_dictionary(self)
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -122,3 +123,8 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """To dictionary method"""
+        attrs = ["id", "width", "height", "x", "y"]
+        return {key: getattr(self, key) for key in attrs}
