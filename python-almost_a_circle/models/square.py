@@ -4,7 +4,7 @@
 from models.rectangle import Rectangle
 
 
-class Square:
+class Square(Rectangle):
     """square class
     Import from models/rectangle.py
     Attributes:
