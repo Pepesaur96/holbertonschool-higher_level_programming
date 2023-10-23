@@ -18,7 +18,8 @@ class Square(Rectangle):
         area(self)
         display(self)
         __str__(self)
-        update(self, *args, **kwargs)"""
+        update(self, *args, **kwargs)
+        to_dictionary(self)"""
 
     def __init__(self, size, x=0, y=0, id=None):
         """init method
@@ -59,3 +60,8 @@ class Square(Rectangle):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """to_dictionary method"""
+        attrs = ["id", "size", "x", "y"]
+        return {key: getattr(self, key) for key in attrs}
