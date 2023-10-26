@@ -78,3 +78,9 @@ class Base:
             return [cls.create(**obj) for obj in objs]
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def to_dictionary(cls, obj):
+        """To dictionary method"""
+        attrs = ["id", "width", "height", "x", "y"]
+        return {key: getattr(obj, key) for key in attrs}
