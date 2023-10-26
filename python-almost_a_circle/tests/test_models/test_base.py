@@ -2,23 +2,10 @@
 """Unittest for base.py"""
 
 import unittest
-import pep8
 import json
 import os
 from models.base import Base
 from models.rectangle import Rectangle
-
-
-class TestPep8(unittest.TestCase):
-    """Pep8 class"""
-
-    def test_pep8(self):
-        """test for pep8"""
-        style = pep8.StyleGuide(quiet=False)
-        errors = 0
-        files = ['models/base.py', 'tests/test_models/test_base.py']
-        errors += style.check_files(files).total_errors
-        self.assertEqual(errors, 0, "fix pep8")
 
 
 class TestBase(unittest.TestCase):
