@@ -2,8 +2,8 @@
 """ Base class """
 
 
-import json
 from os import path
+import json
 
 
 class Base:
@@ -62,9 +62,9 @@ class Base:
     def create(cls, **dictionary):
         """ create method """
         if cls.__name__ == "Rectangle":
-            dummy = cls(1, 1)
+            dummy = cls(5, 5)
         elif cls.__name__ == "Square":
-            dummy = cls(1)
+            dummy = cls(5)
         dummy.update(**dictionary)
         return dummy
 
