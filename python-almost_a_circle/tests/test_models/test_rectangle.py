@@ -2,6 +2,9 @@
 """unittest for rectangle.py"""
 
 import unittest
+import io
+import unittest.mock
+import json
 from models.rectangle import Rectangle
 
 
