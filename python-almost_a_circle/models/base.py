@@ -4,6 +4,7 @@
 
 from os import path
 import json
+import turtle
 
 
 class Base:
@@ -84,3 +85,27 @@ class Base:
         """To dictionary method"""
         attrs = ["id", "width", "height", "x", "y"]
         return {key: getattr(obj, key) for key in attrs}
+
+    @classmethod
+    def draw(list_rectangles, list_squares):
+        """Opens a window and draws all the Rectangles and Squares."""
+        turtle.speed(0)
+        turtle.hideturtle()
+        turtle.penup()
+        for rect in list_rectangles:
+            turtle.goto(rect.x, rect.y)
+            turtle.pendown()
+            for i in range(2):
+                turtle.forward(rect.width)
+                turtle.left(90)
+                turtle.forward(rect.height)
+                turtle.left(90)
+            turtle.penup()
+        for square in list_squares:
+            turtle.goto(square.x, square.y)
+            turtle.pendown()
+            for i in range(4):
+                turtle.forward(square.size)
+                turtle.left(90)
+            turtle.penup()
+        turtle.exitonclick()
