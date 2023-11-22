@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     # Querying data from the State table that contain
     # the letter a
-    for State in session.query(State).filter(State.name.like('%a%').order_by(State.id)):
+    for State in session.query(State).filter(State.name.like('%a%')).order_by(State.id):
         print("{}: {}".format(State.id, State.name))
 
     # Close the session
