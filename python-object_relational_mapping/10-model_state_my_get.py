@@ -29,8 +29,11 @@ if __name__ == "__main__":
 
     # Querying data from the State table that
     # contain the letter a
-    for State in session.query(State).filter_by(name=argv[4]).first():
+    state = session.query(State).filter_by(name=argv[4]).first()
+    if state:
         print("{}".format(State.id))
+    else:
+        print("Not found")
 
     # Close the session
     session.close()
