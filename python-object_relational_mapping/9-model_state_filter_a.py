@@ -11,9 +11,9 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
 
-    # Create engine that connects to the core (MySQL)
-    # The dialect is mysql, the driver is mysqldb
-    # user:password@host:port/database
+    # Create engine that connects to the core
+    # (MySQL) The dialect is mysql, the driver
+    # is mysqldb user:password@host:port/database
     engine = create_engine(
         "mysql+mysqldb://{}:{}@localhost/{}"
         .format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
@@ -24,8 +24,8 @@ if __name__ == "__main__":
     # instance of Session class
     session = Session()
 
-    # Querying data from the State table that contain
-    # the letter a
+    # Querying data from the State table that
+    # contain the letter a
     for State in session.query(State).filter(State.name.like('%a%')).order_by(State.id):
         print("{}: {}".format(State.id, State.name))
 
