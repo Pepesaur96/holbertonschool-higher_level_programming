@@ -19,7 +19,7 @@ if __name__ == "__main__":
     cursor = connection.cursor()
 
     # Execute the SELECT query
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
     # Fetch all rows that start with N
     for row in cursor.fetchall():
