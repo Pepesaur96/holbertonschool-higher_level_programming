@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""a script that lists all State objects that contain
-the letter a from the database hbtn_0e_6_usa"""
+"""a script that lists all State objects that
+contain the letter a from the database
+hbtn_0e_6_usa"""
 
 from sys import argv
 from model_state import Base, State
@@ -23,7 +24,8 @@ if __name__ == "__main__":
     # instance of Session class
     session = Session()
 
-    # Querying data from the State table that contain the letter a
+    # Querying data from the State table that contain
+    # the letter a
     for State in session.query(State).filter(State.name.like('%a%').order_by(State.id)):
         print("{}: {}".format(State.id, State.name))
 
