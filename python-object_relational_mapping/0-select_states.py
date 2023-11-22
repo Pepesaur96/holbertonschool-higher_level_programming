@@ -6,7 +6,8 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    # Connect to MySQL server running on localhost at port 3306 and get MySQL credentials from command line arguments
+    """Connect to MySQL server running on localhost at port 3306
+    and get MySQL credentials from command line arguments"""
     connection = MySQLdb.connect(
         host="localhost",
         port=3306,
