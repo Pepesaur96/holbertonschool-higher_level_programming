@@ -31,7 +31,7 @@ if __name__ == "__main__":
     # contain the letter a
     state = session.query(State).filter_by(name=argv[4]).first()
     if state:
-        print("{}".format(State.id))
+        print("{}".format(state.id))
     else:
         print("Not found")
 
