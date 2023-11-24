@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""a script that changes the name of a
-State object from the database
-hbtn_0e_6_usa"""
+"""a script that adds the State object
+“Louisiana” to the database hbtn_0e_6_usa"""
 
 from sys import argv
 from model_state import Base, State
