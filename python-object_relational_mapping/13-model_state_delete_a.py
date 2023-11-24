@@ -25,11 +25,11 @@ if __name__ == "__main__":
     session = Session()
 
     # Querying data from the states table
-    query = session.query(State).filter(State.name.like('a')).all()
+    query = session.query(State).filter(State.name.contains('a')).all()
 
     # Delete all the rows
-    for state in query:
-        session.delete(state)
+    for row in query:
+        session.delete(row)
 
     # Commit the changes
     session.commit()
