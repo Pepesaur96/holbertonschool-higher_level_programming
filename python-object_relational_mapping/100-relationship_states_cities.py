@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     # Create a new state California and a new city San Francisco
     new_state = State(name="California")
-    new_city = City(name="San Francisco", state=new_state)
+    new_city = City(name="San Francisco")
     new_state.cities.append(new_city)
 
     # Add the new state and city to the database
