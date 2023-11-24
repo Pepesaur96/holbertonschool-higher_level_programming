@@ -5,7 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 
-
+# Create a new declarative_base instance called Base
 Base = declarative_base()
 
 
