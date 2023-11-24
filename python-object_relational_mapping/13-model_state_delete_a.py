@@ -28,8 +28,8 @@ if __name__ == "__main__":
     query = session.query(State).filter(State.name.like('a')).all()
 
     # Delete all the rows
-    for row in query:
-        session.delete(row)
+    for state in query:
+        session.delete(state)
 
     # Commit the changes
     session.commit()
